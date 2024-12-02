@@ -1,0 +1,43 @@
+
+
+<form [formGroup]="stage">
+  description : <input formControlName="description" />
+  <div *ngIf="stage.get('description')!.invalid && stage.get('description')!.touched">
+    Ref required !
+  </div>
+  nbPlace : <input formControlName="nbPlace" />
+  <div *ngIf="stage.get('nbPlace')!.invalid && stage.get('nbPlace')!.touched">
+    Titre invalid !
+  </div>
+  dateDebut : <input formControlName="dateDebut" />
+  <div
+    *ngIf="
+      stage.get('dateDebut')!.invalid && stage.get('dateDebut')!.touched
+    "
+  >
+    Description invalid !
+  </div>
+  dateFin : <input formControlName="dateFin" />
+  <div
+    *ngIf="stage.get('dateFin')!.invalid && stage.get('dateFin')!.touched"
+  >
+    Entreprise invalid !
+  </div>
+  etat : <input formControlName="etat" type="checkbox" />
+  <div
+    *ngIf="stage.get('etat')!.invalid && stage.get('etat')!.touched"
+  >
+    Disponible invalid !
+  </div>
+<!--  Nbr Interesse : <input formControlName="nbrInteresse" type="number" />-->
+<!--  <div-->
+<!--    *ngIf="-->
+<!--      stage.get('nbrInteresse')!.invalid && stage.get('nbrInteresse')!.touched-->
+<!--    "-->
+<!--  >-->
+<!--    Nbr Interesse invalid !-->
+<!--  </div>-->
+  <button type="submit" [disabled]="stage.invalid" (click)="save()">
+    {{ getButtonTitle() }}
+  </button>
+</form>

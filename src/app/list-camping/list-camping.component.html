@@ -1,0 +1,55 @@
+<ul>
+  <li>
+    <a aria-current="page" routerLink="/camping/add" routerLinkActive="active"
+    >Ajouter un stage
+    </a>
+  </li>
+  <li>
+    <a routerLink="/camping" routerLinkActive="active">Consulter les stages</a>
+  </li>
+</ul>
+
+<div>
+  Search Stage par description
+  <input class="form-control" (input)="onSearchTextChange($event)" />
+  <table>
+    <thead>
+    <tr>
+      <th>ID</th>
+      <th>Ref</th>
+      <th>Titre</th>
+      <th>Description</th>
+      <th>Entreprise</th>
+      <th>Disponible</th>
+      <th>Nbre Interesse</th>
+      <th>Actions</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let stage of stagesFiltred">
+      <td>{{ stage.id }}</td>
+      <td>{{ stage.dateDebut }}</td>
+      <td>{{ stage.dateFin }}</td>
+      <td>{{ stage.description }}</td>
+      <td>{{ stage.etat }}</td>
+      <td>{{ stage.nbPlace }}</td>
+<!--      <td>-->
+<!--        {{ stage.nbrInteresse }}-->
+<!--        <button-->
+<!--          (click)="incrementNbreInteresse(stage)"-->
+<!--          [disabled]="!stage.disponible"-->
+<!--          class="bg-green-500 hover:bg-green-700 text-white font-bold py-1 px-2 rounded mr-2"-->
+<!--        >-->
+<!--          +-->
+<!--        </button>-->
+<!--      </td>-->
+      <td>
+        <!-- <button (click)="editStage(stage.id)">Edit</button> -->
+        <button (click)="deleteStage(stage.id)">Delete</button>
+        <a [routerLink]="['/showstage',stage.id]" class="btn btn-primary">details</a>
+
+      </td>
+    </tr>
+    </tbody>
+  </table>
+</div>

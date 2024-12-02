@@ -1,0 +1,44 @@
+{
+  "campings": [
+    {
+      "id": "1",
+      "description": "Th best",
+      "nbPlace": 5,
+      "dateDebut": "dd",
+      "dateFin": "ss",
+      "etat": true
+    },
+    {
+      "id": "306f",
+      "description": "qsd",
+      "nbPlace": "2",
+      "dateDebut": "AAA",
+      "dateFin": "DD",
+      "etat": true
+    },
+    {
+      "id": "e7a5",
+      "description": "qsd",
+      "nbPlace": "3",
+      "dateDebut": "DD",
+      "dateFin": "FF",
+      "etat": false
+    },
+    {
+      "id": "77fd",
+      "description": "qsd",
+      "nbPlace": "3",
+      "dateDebut": "DD",
+      "dateFin": "FF",
+      "etat": false
+    },
+    {
+      "id": "1e32",
+      "description": "fff",
+      "nbPlace": "3",
+      "dateDebut": "DSD",
+      "dateFin": "DFD",
+      "etat": true
+    }
+  ]
+}
